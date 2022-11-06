@@ -1,0 +1,15 @@
+README.md
+license.txt
+pyproject.toml
+setup.py
+discordBotTranslation/__init__.py
+discordBotTranslation/disnake.py
+discordBotTranslation/exceptions.py
+discordBotTranslation/formatting.py
+discordBotTranslation/main.py
+discordBotTranslation/type.py
+distrans.egg-info/PKG-INFO
+distrans.egg-info/SOURCES.txt
+distrans.egg-info/dependency_links.txt
+distrans.egg-info/requires.txt
+distrans.egg-info/top_level.txt

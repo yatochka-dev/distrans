@@ -7,9 +7,9 @@ VERSION = "0.0.1"
 DESCRIPTION = "A simple translation library for discord bots"
 
 setup(
-    name="discordBot-translation-Philip Sagan",
+    name="distrans",
     version=VERSION,
-    author="Philip Sagan",
+    author="Philip Sagan/Yatochka",
     author_email="philipchef13@gmail.com",
     description=DESCRIPTION,
     long_description=long_description,
