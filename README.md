@@ -68,9 +68,8 @@ translated = await bot.t(
     )
 ```
 
-
 ### Advanced usage
-  
+
 ``` py
 from distrans import TranslationInteractionBot
 
@@ -87,6 +86,7 @@ class MyTranslationInteractionBot(TranslationInteractionBot):
         return "en" # you can return language code based on current context
         # (guild, user, etc.)
 
+```
 
 #### locales/en/common.json
 
