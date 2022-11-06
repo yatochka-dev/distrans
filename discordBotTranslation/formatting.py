@@ -1,7 +1,7 @@
 import sys
-from loguru import logger
-from src import AlreadyFormatted
 from string import Template
+from discordBotTranslation import AlreadyFormatted
+
 
 class Formatter:
 
@@ -72,9 +72,3 @@ class Formatter:
 
     def __sizeof__(self):
         return sys.getsizeof(self.data)
-
-
-
-
-
-

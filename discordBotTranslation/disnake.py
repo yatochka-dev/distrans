@@ -7,16 +7,26 @@ from disnake.ext.commands import (
     BotBase,
 )
 
-from src import language
+from discordBotTranslation import language
 from .main import BaseTranslationBot
+
+__all__ = [
+    "TranslationClient",
+    "TranslationAutoShardedClient",
+    "TranslationBot",
+    "TranslationAutoShardedBot",
+    "TranslationInteractionBot",
+    "TranslationAutoShardedInteractionBot",
+    "TranslationBotBase"
+]
 
 
 class TranslationClient(Client, BaseTranslationBot):
     def __init__(
-        self,
-        directory: str,
-        languages: list[language],
-        **kwargs,
+            self,
+            directory: str,
+            languages: list[language],
+            **kwargs,
     ):
         super().__init__(**kwargs)
         BaseTranslationBot.__init__(
@@ -26,10 +36,10 @@ class TranslationClient(Client, BaseTranslationBot):
 
 class TranslationAutoShardedClient(AutoShardedClient, BaseTranslationBot):
     def __init__(
-        self,
-        directory: str,
-        languages: list[language],
-        **kwargs,
+            self,
+            directory: str,
+            languages: list[language],
+            **kwargs,
     ):
         super().__init__(**kwargs)
         BaseTranslationBot.__init__(
@@ -39,10 +49,10 @@ class TranslationAutoShardedClient(AutoShardedClient, BaseTranslationBot):
 
 class TranslationBot(Bot, BaseTranslationBot):
     def __init__(
-        self,
-        directory: str,
-        languages: list[language],
-        **kwargs,
+            self,
+            directory: str,
+            languages: list[language],
+            **kwargs,
     ):
         super().__init__(**kwargs)
         BaseTranslationBot.__init__(
@@ -52,10 +62,10 @@ class TranslationBot(Bot, BaseTranslationBot):
 
 class TranslationAutoShardedBot(AutoShardedBot, BaseTranslationBot):
     def __init__(
-        self,
-        directory: str,
-        languages: list[language],
-        **kwargs,
+            self,
+            directory: str,
+            languages: list[language],
+            **kwargs,
     ):
         super().__init__(**kwargs)
         BaseTranslationBot.__init__(
@@ -65,10 +75,10 @@ class TranslationAutoShardedBot(AutoShardedBot, BaseTranslationBot):
 
 class TranslationInteractionBot(InteractionBot, BaseTranslationBot):
     def __init__(
-        self,
-        directory: str,
-        languages: list[language],
-        **kwargs,
+            self,
+            directory: str,
+            languages: list[language],
+            **kwargs,
     ):
         super().__init__(**kwargs)
         BaseTranslationBot.__init__(
@@ -80,10 +90,10 @@ class TranslationAutoShardedInteractionBot(
     AutoShardedInteractionBot, BaseTranslationBot
 ):
     def __init__(
-        self,
-        directory: str,
-        languages: list[language],
-        **kwargs,
+            self,
+            directory: str,
+            languages: list[language],
+            **kwargs,
     ):
         super().__init__(**kwargs)
         BaseTranslationBot.__init__(
@@ -93,10 +103,10 @@ class TranslationAutoShardedInteractionBot(
 
 class TranslationBotBase(BotBase, BaseTranslationBot):
     def __init__(
-        self,
-        directory: str,
-        languages: list[language],
-        **kwargs,
+            self,
+            directory: str,
+            languages: list[language],
+            **kwargs,
     ):
         super().__init__(**kwargs)
         BaseTranslationBot.__init__(

@@ -8,3 +8,6 @@ class DirectoryIsEmpty(TranslationException):
 
 class AlreadyFormatted(TranslationException):
     pass
+
+class CategoryDoesNotExist(TranslationException):
+    pass
