@@ -68,6 +68,26 @@ translated = await bot.t(
     )
 ```
 
+
+### Advanced usage
+  
+``` py
+from distrans import TranslationInteractionBot
+
+class MyTranslationInteractionBot(TranslationInteractionBot):
+   
+    def get_language(**kwargs):
+        # kwargs - it's the same kwargs that you're passing to the
+        # get() or t() method
+        # like:
+        # await bot.t("common:greeting", values={"name": "John"}, 
+        #inter=inter)
+        # you will get an inter object in kwargs
+        # Your code here
+        return "en" # you can return language code based on current context
+        # (guild, user, etc.)
+
+
 #### locales/en/common.json
 
 ``` json
