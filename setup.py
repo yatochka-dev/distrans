@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 with open("README.md", "r") as f:
     long_description = f.read()
 
-VERSION = "0.0.1"
+VERSION = "1.0.0"
 DESCRIPTION = "A simple translation library for discord bots"
 
 setup(
