@@ -7,7 +7,7 @@ from disnake.ext.commands import (
     BotBase,
 )
 
-from discordBotTranslation import language
+from .type import language
 from .main import BaseTranslationBot
 
 __all__ = [

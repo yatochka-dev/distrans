@@ -1,1 +1,2 @@
 disnake>=2.1
+setuptools~=65.5.1

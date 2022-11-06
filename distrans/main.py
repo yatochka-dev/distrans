@@ -4,6 +4,8 @@ import os
 from abc import ABC
 from typing import Any
 
+from asgiref.sync import sync_to_async
+
 from .exceptions import DirectoryIsEmpty, CategoryDoesNotExist
 from .formatting import Formatter
 from .type import language
@@ -43,7 +45,7 @@ class BaseTranslationBot(AbstractTRBot):
         return self.languages[0]
 
     def get(
-            self, __key: str, /, values: dict = dict, code: str = None, **kwargs
+        self, __key: str, /, values: dict = dict, code: str = None, **kwargs
     ) -> str | Formatter:
 
         """
@@ -77,6 +79,13 @@ class BaseTranslationBot(AbstractTRBot):
         return self.compiled.get(code).get(file).get(key, __key)
 
         # class BaseTranslationBot(ABC):
+
+    async def t(
+        self, __key: str, /, values: dict = dict, code: str = None, **kwargs
+    ) -> str | Formatter:
+        return await sync_to_async(self.get)(
+            __key, values=values, code=code, **kwargs
+        )
 
     def _check_directory_exists(self) -> str:
         if not os.path.exists(self._directory):

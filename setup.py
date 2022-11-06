@@ -9,7 +9,7 @@ DESCRIPTION = "A simple translation library for discord bots"
 setup(
     name="distrans",
     version=VERSION,
-    author="Philip Sagan/Yatochka",
+    author="Yatochka",
     author_email="philipchef13@gmail.com",
     description=DESCRIPTION,
     long_description=long_description,
@@ -22,6 +22,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "disnake"
+        "disnake",
+        "asgiref",
     ]
 )
