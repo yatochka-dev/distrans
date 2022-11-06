@@ -58,7 +58,7 @@ if __name__ == "__main__":
     main()
 ```
 
-### Using asynchrony
+### Using async/await
 
 ``` py
 translated = await bot.t(
@@ -66,8 +66,6 @@ translated = await bot.t(
     code=language, 
     values={"name": inter.user.name}
     )
-```
-
 ```
 
 #### locales/en/common.json
